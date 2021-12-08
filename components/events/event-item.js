@@ -27,7 +27,7 @@ const EventItem = props => (
     overflow='hidden'
   >
     <Image
-      boxSize={['180px', '200px']}
+      boxSize={['180px', '250px']}
       objectFit='cover'
       src={`/${props.item.image}`}
       alt={props.item.title}
