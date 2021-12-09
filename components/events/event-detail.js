@@ -1,4 +1,12 @@
-import { Box, Flex, Center, Heading, Image, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Center,
+  Heading,
+  Image,
+  Text,
+  Icon,
+} from '@chakra-ui/react';
 import { GoLocation } from 'react-icons/go';
 import { AiOutlineCalendar } from 'react-icons/ai';
 
@@ -39,14 +47,16 @@ const EventDetail = props => {
               alt='Dan Abramov'
               mb={3}
             />
-            <Box ml={3}>{event.description}</Box>
+            <Box ml={3} as='p'>
+              {event.description}
+            </Box>
           </Flex>
-          <Flex m={3} justify='space-around' direction={['column', 'row']}>
+          <Flex justify='space-between' direction='column'>
             <Text as='p' mb={3}>
-              <GoLocation /> {event.location}
+              <Icon as={GoLocation} color='teal.500' /> {event.location}
             </Text>
             <Text as='p'>
-              <AiOutlineCalendar /> {event.date}
+              <Icon as={AiOutlineCalendar} color='teal.500' /> {event.date}
             </Text>
           </Flex>
         </Box>
