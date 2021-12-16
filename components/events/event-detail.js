@@ -47,11 +47,11 @@ const EventDetail = props => {
               alt='Dan Abramov'
               mb={3}
             />
-            <Box ml={3} as='p'>
+            <Box ml={3} mb={3} as='p'>
               {event.description}
             </Box>
           </Flex>
-          <Flex justify='space-between' direction='column'>
+          <Flex direction='column' justify='space-between' ml={[2, 0]}>
             <Text as='p' mb={3}>
               <Icon as={GoLocation} color='teal.500' /> {event.location}
             </Text>
